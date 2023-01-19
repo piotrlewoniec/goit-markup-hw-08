@@ -1,0 +1,26 @@
+/*web site main variables */
+@use 'utils/variables';
+/*web site main settings*/
+@use 'utils/mainsettings';
+/*header settings*/
+@use 'components/page-header';
+@use 'components/logo-text';
+@use 'components/navigation';
+/*footer settings*/
+@use 'components/page-footer';
+@use 'components/company-address';
+@use 'components/company-media';
+@use 'components/company-newsletter-submit';
+/*main page settings*/
+@use 'components/ordering-section';
+@use 'components/advantages-section';
+@use 'components/offer-section';
+@use 'components/team-section';
+@use 'components/contractors-section';
+/*portfolio page settings*/
+@use 'components/filter-buttons-section';
+@use 'components/portfolio-section';
+/*modal window*/
+@use 'components/modal-window';
+@use 'components/contact-form1';
+/*! This comment will be included even in compressed mode. */

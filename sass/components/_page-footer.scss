@@ -1,0 +1,29 @@
+/*!footer settings*/
+
+.page-footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: var(--background-color2);
+
+  &__items-holder {
+    display: flex;
+    align-items: baseline;
+    column-gap: 70px;
+  }
+
+  &__paragraph-title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--fourth-text-color);
+  }
+
+  &__item1 {
+    display: flex;
+    justify-content: center;
+    column-gap: 10px;
+    padding-top: 20px;
+  }
+}

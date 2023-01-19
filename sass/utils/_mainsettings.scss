@@ -1,0 +1,38 @@
+/*web site main settings*/
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--main-fonts);
+  color: var(--main-text-color);
+}
+
+/*web site common settings*/
+
+/*Geometry*/
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+
+  &__filter-buttons {
+    padding-top: 94px;
+    padding-bottom: 50px;
+  }
+
+  &__portfolio {
+    padding-bottom: 94px;
+  }
+}

@@ -1,0 +1,31 @@
+.logo-text {
+  font-family: 'Raleway';
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+
+  &:visited {
+    color: var(--main-text-color);
+  }
+
+  &__first-word {
+    color: var(--selected-item-color);
+  }
+
+  &__second-word-header {
+    color: var(--main-text-color);
+  }
+
+  &__second-word-header:visited {
+    color: var(--main-text-color);
+  }
+
+  &__second-word-footer {
+    color: var(--fourth-text-color);
+  }
+
+  &__second-word-footer:visited {
+    color: var(--fourth-text-color);
+  }
+}
