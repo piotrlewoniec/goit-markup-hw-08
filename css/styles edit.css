@@ -553,21 +553,21 @@ body {
   list-style: none;
 }
 
-.advantages__items-holder > li {
+.advantages__item {
   flex-basis: calc((100% - 90px) / 4);
 }
 
-.advantages__items-holder > li > div {
+.advantages__iconbox {
   display: flex;
   justify-content: center;
   padding-top: 25px;
   padding-bottom: 25px;
-  background-color: var(--background-color1);
+  background-color: var(--second-nonselected-item-color);
   border-radius: 4px;
   margin-bottom: 30px;
 }
 
-.advantages__items-holder > li > h3 {
+.advantages__title {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -594,15 +594,15 @@ body {
   padding-top: 50px;
 }
 
-.offer__items-holder > li {
+.offer__item {
   position: relative;
 }
 
-.offer__items-holder > li > img {
+.offer__picture {
   display: block;
 }
 
-.offer__items-holder > li > p {
+.offer__description {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -645,7 +645,7 @@ body {
   list-style: none;
 }
 
-.team__items-holder > li {
+.team__item {
   width: 270px;
   background: var(--fourth-text-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -653,16 +653,16 @@ body {
   border-radius: 0px 0px 4px 4px;
 }
 
-.team__items-holder > li > img {
+.team__picture {
   display: block;
 }
 
-.team__items-holder > li > div {
+.team__dataholder {
   padding-top: 30px;
   padding-bottom: 30px;
 }
 
-.team__items-holder > li > div > h3 {
+.team__membername {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
@@ -671,18 +671,18 @@ body {
   color: var(--main-text-color);
 }
 
-.team__items-holder > li > div > p {
+.team__memberposition {
   padding-top: 10px;
 }
 
-.team__items-holder > li > div > div {
+.team__iconholder {
   display: flex;
   justify-content: center;
   column-gap: 10px;
   padding-top: 16px;
 }
 
-.team__items-holder > li > div > div > a {
+.team__memberlinks {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -694,8 +694,8 @@ body {
   transition: var(--background-hoverfocus-animation1), var(--icons-hoverfocus-animation1);
 }
 
-.team__items-holder > li > div > div > a:focus,
-.team__items-holder > li > div > div > a:hover {
+.team__memberlinks:focus,
+.team__memberlinks:hover {
   fill: var(--fourth-text-color);
   background-color: var(--selected-item-color);
 }
@@ -715,7 +715,7 @@ body {
   padding-top: 50px;
 }
 
-.contractors > a {
+.contractors__boxitemlink {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -729,8 +729,8 @@ body {
   transition: var(--icons-hoverfocus-animation1), var(--border-hoverfocus-animation1);
 }
 
-.contractors > a:focus,
-.contractors > a:hover {
+.contractors__boxitemlink:focus,
+.contractors__boxitemlink:hover {
   fill: var(--selected-item-color);
   border: 1px solid var(--selected-item-color);
 }
@@ -794,7 +794,7 @@ body {
   list-style: none;
 }
 
-.portfolio1 > li {
+.portfolio1__item {
   position: relative;
   width: 370px;
   font-size: 0;
@@ -803,18 +803,18 @@ body {
   transition: var(--box-hoverfocus-animation1);
 }
 
-.portfolio1 > li:hover,
-.portfolio1 > li:hover > div:nth-child(2) {
+.portfolio1__item:hover,
+.portfolio1__item:hover .portfolio1__realizationdescrp {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
   transform: translateY(0);
 }
 
-.portfolio1 > li > img {
+.portfolio1__picture {
   display: block;
 }
 
-.portfolio1 > li > div:nth-child(2) {
+.portfolio1__realizationdescrp {
   position: absolute;
   top: 0;
   left: 0;
@@ -831,7 +831,7 @@ body {
   transition: transform 250ms linear;
 }
 
-.portfolio1 > li > div:nth-child(3) {
+.portfolio1__databox {
   position: relative;
   z-index: 1;
   width: 100%;
@@ -845,7 +845,7 @@ body {
   background-color: var(--fourth-text-color);
 }
 
-.portfolio1 > li > div:nth-child(3) > h3 {
+.portfolio1__realizationname {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -853,7 +853,7 @@ body {
   color: var(--main-text-color);
 }
 
-.portfolio1 > li > div:nth-child(3) > p {
+.portfolio1__realizationtype {
   font-size: 16px;
   margin-top: 4px;
 }

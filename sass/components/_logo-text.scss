@@ -1,9 +1,15 @@
+@use '../utils/variables' as vars;
 .logo-text {
   font-family: 'Raleway';
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: calc(28 / 24);
   letter-spacing: 0.03em;
   text-decoration: none;
+
+  @include vars.media-desktop {
+    font-size: 26px;
+    line-height: calc(31 / 26);
+  }
 
   &:visited {
     color: var(--main-text-color);
@@ -13,19 +19,21 @@
     color: var(--selected-item-color);
   }
 
-  &__second-word-header {
-    color: var(--main-text-color);
-  }
+  &__second-word {
+    &-header {
+      color: var(--main-text-color);
 
-  &__second-word-header:visited {
-    color: var(--main-text-color);
-  }
+      &:visited {
+        color: var(--main-text-color);
+      }
+    }
 
-  &__second-word-footer {
-    color: var(--fourth-text-color);
-  }
+    &-footer {
+      color: var(--fourth-text-color);
 
-  &__second-word-footer:visited {
-    color: var(--fourth-text-color);
+      &:visited {
+        color: var(--fourth-text-color);
+      }
+    }
   }
 }

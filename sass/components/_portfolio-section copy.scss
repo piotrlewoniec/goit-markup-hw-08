@@ -1,5 +1,4 @@
 .portfolio1 {
-  $classname: &;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -15,26 +14,27 @@
     visibility: hidden;
   }
 
-  &__item {
+  & > li {
     position: relative;
     width: 370px;
     font-size: 0;
     overflow: hidden;
     cursor: pointer;
     transition: var(--box-hoverfocus-animation1);
-
-    &:hover,
-    &:hover #{$classname}__realizationdescrp {
-      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-        1px 4px 6px rgba(0, 0, 0, 0.16);
-      transform: translateY(0);
-    }
   }
-  &__picture {
+
+  & > li:hover,
+  & > li:hover > div:nth-child(2) {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+    transform: translateY(0);
+  }
+
+  & > li > img {
     display: block;
   }
 
-  &__realizationdescrp {
+  & > li > div:nth-child(2) {
     position: absolute;
     top: 0;
     left: 0;
@@ -51,7 +51,7 @@
     transition: transform 250ms linear;
   }
 
-  &__databox {
+  & > li > div:nth-child(3) {
     position: relative;
     z-index: 1;
     width: 100%;
@@ -65,7 +65,7 @@
     background-color: var(--fourth-text-color);
   }
 
-  &__realizationname {
+  & > li > div:nth-child(3) > h3 {
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
@@ -73,7 +73,7 @@
     color: var(--main-text-color);
   }
 
-  &__realizationtype {
+  & > li > div:nth-child(3) > p {
     font-size: 16px;
     margin-top: 4px;
   }

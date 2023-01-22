@@ -20,10 +20,10 @@
     &--street {
       color: var(--fourth-text-color);
       padding-top: 20px;
+    }
 
-      &:visited {
-        color: var(--fourth-text-color);
-      }
+    &--street:visited {
+      color: var(--fourth-text-color);
     }
 
     &:focus,

@@ -1,8 +1,19 @@
+@use '../utils/variables' as vars;
 /*! header settings*/
 
 .page-header {
-  padding-top: 24px;
-  padding-bottom: 25px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  @include vars.media-tablet {
+    padding-top: 21px;
+    padding-bottom: 21px;
+  }
+
+  @include vars.media-desktop {
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
   border-bottom: 1px solid #ececec;
 
   &__items-holder {
@@ -14,13 +25,27 @@
   &__items-left {
     display: flex;
     align-items: center;
-    column-gap: 93px;
+    @include vars.media-tablet {
+      column-gap: 83px;
+    }
+    @include vars.media-desktop {
+      column-gap: 93px;
+    }
   }
 
   &__items-right {
-    display: flex;
-    align-items: center;
-    column-gap: 50px;
+    display: none;
+    @include vars.media-tablet-range {
+      display: flex;
+      flex-direction: column;
+      row-gap: 6px;
+      /*ToDo row gap on figma 10px, to achive that was given less check it later*/
+    }
+    @include vars.media-desktop {
+      display: flex;
+      align-items: center;
+      column-gap: 50px;
+    }
   }
 
   &__item1 {
@@ -29,19 +54,56 @@
   }
 
   &__icon1 {
-    padding-right: 10px;
+    @include vars.media-tablet {
+      padding-right: 8px;
+    }
+    @include vars.media-desktop {
+      padding-right: 10px;
+    }
     padding-top: 4px;
-  }
 
+    &-size {
+      @include vars.media-tablet {
+        width: 14px;
+        height: 10px;
+      }
+      @include vars.media-desktop {
+        width: 16px;
+        height: 12px;
+      }
+    }
+  }
   &__icon2 {
-    padding-right: 10px;
+    @include vars.media-tablet {
+      padding-right: 8px;
+    }
+    @include vars.media-desktop {
+      padding-right: 10px;
+    }
     padding-top: 2px;
+
+    &-size {
+      @include vars.media-tablet {
+        width: 10px;
+        height: 14px;
+      }
+      @include vars.media-desktop {
+        width: 10px;
+        height: 16px;
+      }
+    }
   }
 
   &__links {
     font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
+    @include vars.media-tablet {
+      font-size: 12px;
+      line-height: calc(14 / 12);
+    }
+    @include vars.media-desktop {
+      font-size: 14px;
+      line-height: calc(16 / 14);
+    }
     letter-spacing: 0.02em;
     text-decoration: none;
     color: var(--second-text-color);

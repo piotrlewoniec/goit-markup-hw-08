@@ -1,29 +1,30 @@
-.team__bck-color {
-  background-color: var(--background-color1);
-}
+.team {
+  &__bck-color {
+    background-color: var(--background-color1);
+  }
 
-.team__title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-  letter-spacing: 0.03em;
-}
+  &__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
+  }
 
-.team__items-holder {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 30px;
-  font-size: 16px;
-  line-height: 1.19;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: var(--second-text-color);
-  padding-top: 50px;
-  list-style: none;
-
-  & > li {
+  &__items-holder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--second-text-color);
+    padding-top: 50px;
+    list-style: none;
+  }
+  &__item {
     width: 270px;
     background: var(--fourth-text-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -31,16 +32,16 @@
     border-radius: 0px 0px 4px 4px;
   }
 
-  & > li > img {
+  &__picture {
     display: block;
   }
 
-  & > li > div {
+  &__dataholder {
     padding-top: 30px;
     padding-bottom: 30px;
   }
 
-  & > li > div > h3 {
+  &__membername {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.19;
@@ -49,18 +50,18 @@
     color: var(--main-text-color);
   }
 
-  & > li > div > p {
+  &__memberposition {
     padding-top: 10px;
   }
 
-  & > li > div > div {
+  &__iconholder {
     display: flex;
     justify-content: center;
     column-gap: 10px;
     padding-top: 16px;
   }
 
-  & > li > div > div > a {
+  &__memberlinks {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -69,12 +70,13 @@
     outline: none;
     border-radius: 50%;
     fill: var(--decorations-first-color);
-    transition: var(--background-hoverfocus-animation1), var(--icons-hoverfocus-animation1);
-  }
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s,
+      fill 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
 
-  & > li > div > div > a:focus,
-  & > li > div > div > a:hover {
-    fill: var(--fourth-text-color);
-    background-color: var(--selected-item-color);
+    &:focus,
+    &:hover {
+      fill: var(--fourth-text-color);
+      background-color: var(--selected-item-color);
+    }
   }
 }

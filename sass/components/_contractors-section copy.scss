@@ -12,7 +12,7 @@
     letter-spacing: 0.03em;
   }
 
-  &__boxitemlink {
+  & > a {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,11 +24,11 @@
     outline: none;
     fill: var(--decorations-first-color);
     transition: var(--icons-hoverfocus-animation1), var(--border-hoverfocus-animation1);
+  }
 
-    &:focus,
-    &:hover {
-      fill: var(--selected-item-color);
-      border: 1px solid var(--selected-item-color);
-    }
+  & > a:focus,
+  & > a:hover {
+    fill: var(--selected-item-color);
+    border: 1px solid var(--selected-item-color);
   }
 }

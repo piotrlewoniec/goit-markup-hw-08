@@ -1,0 +1,142 @@
+.menu-toggle {
+  min-height: 40px;
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  //   margin: 0;
+  //   padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  //   border-radius: 50%;
+  outline: none;
+}
+
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+  fill: var(--selected-item-color);
+}
+
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  //   width: 100vw;
+  //   height: 100vh;
+  //   padding: 32px;
+  background-color: var(--fourth-text-color);
+  z-index: 999;
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+}
+
+.menu-container.is-open {
+  transform: translateX(0);
+}
+
+.menu-container .menu-toggle {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  //   color: #fff;
+}
+
+.mobile-menu {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.mobile-menu .link {
+  display: block;
+  //   padding: 10px;
+  //   color: #fff;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: calc(47 / 40);
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  outline: none;
+  transition: var(--links-hoverfocus-animation1);
+}
+
+.mobile-menu .link:visited {
+  color: var(--main-text-color);
+}
+
+.mobile-menu .link:focus,
+.mobile-menu .link:hover {
+  color: var(--selected-item-color);
+}
+
+.mobile-menu .link-dis {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.mobile-container {
+  padding-top: 48px;
+  padding-bottom: 48px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.mobile-phone {
+  display: block;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: calc(40 / 34);
+  letter-spacing: 0.02em;
+  color: var(--selected-item-color);
+  text-decoration: none;
+  outline: none;
+  padding-top: 302px;
+  padding-bottom: 32px;
+}
+
+.mobile-phone:visited {
+  color: var(--selected-item-color);
+}
+
+.mobile-email {
+  display: block;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: calc(28 / 24);
+  letter-spacing: 0.02em;
+  color: var(--second-text-color);
+  text-decoration: none;
+  outline: none;
+  padding-bottom: 64px;
+}
+
+.mobile-email:visited {
+  color: var(--second-text-color);
+}
+
+.mobile-linkmedia {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: calc(22 / 18);
+  letter-spacing: 0.02em;
+  color: var(--selected-item-color);
+  text-decoration: none;
+  outline: none;
+}
+
+.mobile-linkmedia:visited {
+  color: var(--selected-item-color);
+}
+
+.mobile-linkmedia-space {
+  color: rgba(33, 33, 33, 0.2);
+}
