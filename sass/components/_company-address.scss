@@ -1,6 +1,10 @@
+@use '../utils/variables' as vars;
 .company-address {
   display: flex;
   flex-direction: column;
+  @include vars.media-tablet-max {
+    align-items: center;
+  }
   font-style: normal;
   background-color: var(--background-color2);
 

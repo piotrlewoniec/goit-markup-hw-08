@@ -40,6 +40,12 @@
   }
 }
 
+@mixin media-tablet-max {
+  @media (max-width: 1199px) {
+    @content;
+  }
+}
+
 @mixin media-desktop {
   @media (min-width: 1200px) {
     @content;
