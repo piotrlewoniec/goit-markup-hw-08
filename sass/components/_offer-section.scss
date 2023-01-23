@@ -1,4 +1,10 @@
+@use '../utils/variables' as vars;
 .offer {
+  @include vars.media-tablet-max {
+    &__displayoff {
+      display: none;
+    }
+  }
   &__title {
     font-weight: 700;
     font-size: 36px;
@@ -9,6 +15,7 @@
 
   &__items-holder {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     gap: 30px;
@@ -28,7 +35,7 @@
     position: absolute;
     left: 0;
     bottom: 0;
-    width: 370px;
+    width: 100%;
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;

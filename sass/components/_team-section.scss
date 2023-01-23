@@ -1,3 +1,4 @@
+@use '../utils/variables' as vars;
 .team {
   &__bck-color {
     background-color: var(--background-color1);
@@ -5,14 +6,19 @@
 
   &__title {
     font-weight: 700;
-    font-size: 36px;
-    line-height: 1.17;
+    font-size: 28px;
+    line-height: calc(33 / 28);
+    @include vars.media-desktop {
+      font-size: 36px;
+      line-height: calc(42 / 36);
+    }
     text-align: center;
     letter-spacing: 0.03em;
   }
 
   &__items-holder {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     gap: 30px;
@@ -21,11 +27,20 @@
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--second-text-color);
-    padding-top: 50px;
+    padding-top: 30px;
+    @include vars.media-desktop {
+      padding-top: 50px;
+    }
     list-style: none;
   }
   &__item {
-    width: 270px;
+    width: 450px;
+    @include vars.media-tablet {
+      width: 354px;
+    }
+    @include vars.media-desktop {
+      width: 270px;
+    }
     background: var(--fourth-text-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
       0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -38,7 +53,10 @@
 
   &__dataholder {
     padding-top: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 24px;
+    @include vars.media-desktop {
+      padding-bottom: 30px;
+    }
   }
 
   &__membername {

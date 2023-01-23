@@ -1,5 +1,13 @@
+@use '../utils/variables' as vars;
 .advantages {
   padding-top: 94px;
+  padding-bottom: 60px;
+  @include vars.media-tablet {
+    padding-bottom: 45px;
+  }
+  @include vars.media-desktop {
+    padding-bottom: 0px;
+  }
 
   &__items-holder {
     display: flex;
@@ -13,7 +21,13 @@
     list-style: none;
   }
   &__item {
-    flex-basis: calc((100% - 90px) / 4);
+    flex-basis: calc(100%);
+    @include vars.media-tablet {
+      flex-basis: calc((100% - 30px) / 2);
+    }
+    @include vars.media-desktop {
+      flex-basis: calc((100% - 90px) / 4);
+    }
   }
 
   &__iconbox {
@@ -33,6 +47,9 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--main-text-color);
+    @include vars.media-mobile-tab {
+      text-align: center;
+    }
     padding-bottom: 10px;
   }
 }
