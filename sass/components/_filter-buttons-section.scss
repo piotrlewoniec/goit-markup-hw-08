@@ -1,8 +1,12 @@
+@use '../utils/variables' as vars;
 /*portfolio page settings*/
 
 .filterbuttons1 {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  @include vars.media-tablet {
+    justify-content: center;
+  }
   align-items: center;
   gap: 8px;
   list-style: none;
@@ -14,8 +18,8 @@
     text-align: center;
     letter-spacing: 0.03em;
     outline: none;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 4px;
+    padding-right: 4px;
     padding-top: 6px;
     padding-bottom: 6px;
     background-color: var(--background-color1);
@@ -24,6 +28,41 @@
     cursor: pointer;
     transition: var(--links-hoverfocus-animation1), var(--background-hoverfocus-animation1),
       var(--box-hoverfocus-animation1);
+
+    &--btnallwidth {
+      min-width: 104px;
+      @include vars.media-desktop {
+        min-width: 121px;
+      }
+    }
+
+    &--btnpagewidth {
+      min-width: 128px;
+      @include vars.media-desktop {
+        min-width: 93px;
+      }
+    }
+
+    &--btnappwidth {
+      min-width: 145px;
+      @include vars.media-desktop {
+        min-width: 114px;
+      }
+    }
+
+    &--btndsgnwidth {
+      min-width: 103px;
+      @include vars.media-desktop {
+        min-width: 91px;
+      }
+    }
+
+    &--btnadvertwidth {
+      min-width: 130px;
+      @include vars.media-desktop {
+        min-width: 121px;
+      }
+    }
 
     &:focus,
     &:hover {
@@ -36,5 +75,15 @@
   &__description {
     display: none;
     visibility: hidden;
+  }
+
+  &__box1 {
+    height: 100px;
+    width: 100%;
+    background-color: var(--background-color3);
+    @include vars.media-tablet {
+      display: none;
+      visibility: hidden;
+    }
   }
 }
