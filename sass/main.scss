@@ -24,5 +24,6 @@
 @use 'components/modal-window';
 @use 'components/contact-form1';
 /*mobal menu*/
-@use 'components/_mobile-menu';
+@use 'components/mobile-menu';
 /*! This comment will be included even in compressed mode. */
+// @use 'components/test';

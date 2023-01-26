@@ -1,11 +1,18 @@
 @use '../utils/variables' as vars;
 .company-newsletter {
   &__email {
+    // display: flex;
+    // box-sizing: border-box;
+    // display: block;
+    // float: none;
+    // width: 100%;
+    // max-width: 450px;
     width: 450px;
     @include vars.media-desktop {
+      // width: 100%;
+      // max-width: 358px;
       width: 358px;
     }
-    // display: block;
     font-size: 16px;
     line-height: 1.25;
     letter-spacing: 0.03em;
@@ -34,7 +41,12 @@
 
   &__btn {
     position: relative;
+    // display: flex;
     // display: block;
+    // box-sizing: border-box;
+    // float: none;
+    // width: 100%;
+    // max-width: 200px;
     width: 200px;
     font-weight: 700;
     font-size: 16px;
