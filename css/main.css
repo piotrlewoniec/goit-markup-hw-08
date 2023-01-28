@@ -539,6 +539,7 @@ body {
     -webkit-column-gap: 12px;
        -moz-column-gap: 12px;
             column-gap: 12px;
+    width: 100%;
   }
 }
 
@@ -613,7 +614,6 @@ body {
 }
 
 .company-newsletter__email {
-  width: 450px;
   font-size: 16px;
   line-height: 1.25;
   letter-spacing: 0.03em;
@@ -777,7 +777,7 @@ body {
   }
 }
 .ordering__text {
-  width: 365px;
+  max-width: 365px;
   font-weight: 900;
   font-size: 26px;
   line-height: 1.6153846154;
@@ -790,7 +790,7 @@ body {
 }
 @media (min-width: 1200px) {
   .ordering__text {
-    width: 680px;
+    max-width: 680px;
     font-size: 44px;
     line-height: 1.3636363636;
   }
@@ -1107,8 +1107,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   height: 92px;
   width: 210px;
   border: 1px solid var(--decorations-first-color);
@@ -1255,7 +1253,7 @@ body {
 }
 .portfolio1__item {
   position: relative;
-  max-width: 450px;
+  width: 450px;
   font-size: 0;
   overflow: hidden;
   cursor: pointer;
@@ -1264,12 +1262,12 @@ body {
 }
 @media (min-width: 768px) {
   .portfolio1__item {
-    max-width: 354px;
+    width: 354px;
   }
 }
 @media (min-width: 1200px) {
   .portfolio1__item {
-    max-width: 370px;
+    width: 370px;
   }
 }
 .portfolio1__item:hover, .portfolio1__item:hover .portfolio1__realizationdescrp {
@@ -1317,7 +1315,6 @@ body {
 .portfolio1__databox {
   position: relative;
   z-index: 1;
-  width: 100%;
   padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 24px;

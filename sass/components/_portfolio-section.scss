@@ -18,12 +18,15 @@
 
   &__item {
     position: relative;
-    max-width: 450px;
+    // max-
+    width: 450px;
     @include vars.media-tablet {
-      max-width: 354px;
+      // max-
+      width: 354px;
     }
     @include vars.media-desktop {
-      max-width: 370px;
+      // max-
+      width: 370px;
     }
     font-size: 0;
     overflow: hidden;
@@ -69,7 +72,7 @@
   &__databox {
     position: relative;
     z-index: 1;
-    width: 100%;
+    // width: 100%;
     padding-top: 20px;
     padding-bottom: 20px;
     @include vars.media-tablet-range {
