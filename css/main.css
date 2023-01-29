@@ -529,6 +529,7 @@ body {
         -ms-flex-pack: center;
             justify-content: center;
     row-gap: 20px;
+    width: 100%;
   }
 }
 @media (min-width: 1200px) {
@@ -539,7 +540,41 @@ body {
     -webkit-column-gap: 12px;
        -moz-column-gap: 12px;
             column-gap: 12px;
+  }
+}
+@media (max-width: 1199px) {
+  .page-footer__item3 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     width: 100%;
+    max-width: 450px;
+  }
+}
+@media (min-width: 1200px) {
+  .page-footer__item3 {
+    width: 100%;
+    max-width: 570px;
+  }
+}
+.page-footer__item4 {
+  width: 100%;
+}
+@media (max-width: 1199px) {
+  .page-footer__item4 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 
@@ -614,6 +649,7 @@ body {
 }
 
 .company-newsletter__email {
+  width: 100%;
   font-size: 16px;
   line-height: 1.25;
   letter-spacing: 0.03em;
@@ -668,7 +704,8 @@ body {
 }
 .company-newsletter__btn {
   position: relative;
-  width: 200px;
+  width: 100%;
+  max-width: 200px;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.875;

@@ -23,6 +23,9 @@
 
   &__paragraph-title {
     // display: flex;
+    // display: block;
+    // box-sizing: border-box;
+    // width: 100%;
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14px;
@@ -47,8 +50,10 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      // align-content: stretch;
       row-gap: 20px;
-      // width: 100%;
+      width: 100%;
+      // max-width: 450px;
       // width: 450px;
       // width: 100%;
       // box-sizing: border-box;
@@ -64,11 +69,79 @@
     @include vars.media-desktop {
       justify-content: left;
       column-gap: 12px;
-      width: 100%;
+      // width: 100%;
+      // max-width: 450px;
       // width: calc(max-content + 358px + 200px + 20px);
       // width: calc(358px + 200px + 20px);
       // width: 578px;
     }
     padding-top: 20px;
+  }
+
+  &__item3 {
+    @include vars.media-tablet-max {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      // align-content: stretch;
+      width: 100%;
+      max-width: 450px;
+      // width: 450px;
+      // width: 100%;
+      // box-sizing: border-box;
+      // max-width: 100%;
+      // width: calc(450px + 20px);
+      // max-width: 670px;
+      //
+      // width: 100%;
+      // max-width: 470px;
+      // width: max-content;
+      // width: 100%;
+    }
+    @include vars.media-desktop {
+      //   justify-content: left;
+      width: 100%;
+      // max-width: 578px;
+
+      // width: calc(max-content + 358px + 200px + 20px);
+      // width: calc(358px + 200px + 20px);
+      max-width: 570px;
+      // }
+    }
+  }
+
+  &__item4 {
+    @include vars.media-tablet-max {
+      display: flex;
+    }
+    width: 100%;
+    // flex-direction: column;
+    // align-items: center;
+    // justify-content: center;
+    // align-content: stretch;
+
+    // max-width: 450px;
+    // width: 450px;
+    // width: 100%;
+    // box-sizing: border-box;
+    // max-width: 100%;
+    // width: calc(450px + 20px);
+    // max-width: 670px;
+    //
+    // width: 100%;
+    // max-width: 470px;
+    // width: max-content;
+    // width: 100%;
+    // }
+    // @include vars.media-desktop {
+    // justify-content: left;
+    // width: 100%;
+    // flex-direction: row;
+    // max-width: 450px;
+    // width: calc(max-content + 358px + 200px + 20px);
+    // width: calc(358px + 200px + 20px);
+    // width: 578px;
+    // }
   }
 }
