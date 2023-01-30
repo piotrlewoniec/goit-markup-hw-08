@@ -736,9 +736,6 @@ body {
   background-image: linear-gradient(0deg, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/decorations/teambackground.jpg");
   background-position: center;
   background-repeat: no-repeat;
-  /* max-width: 1600px;
-    margin: 0 auto; */
-  /* background-size: contain; */
 }
 @media (max-width: 767px) {
   .ordering {
